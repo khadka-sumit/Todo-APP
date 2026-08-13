@@ -100,3 +100,7 @@ class _TodoHomeScreenState extends State<TodoHomeScreen> {
     );
   }
 }
+
+
+// Simplified tasks list directly with Map<String, dynamic> for rapid prototyping without unnecessary boilerplate
+
