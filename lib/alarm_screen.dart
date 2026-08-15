@@ -78,3 +78,5 @@ class _AlarmScreenState extends State<AlarmScreen> {
 }
 
 // Integrated audioplayers sound playback on trigger
+
+// Dialog popup with emergency stop handler
