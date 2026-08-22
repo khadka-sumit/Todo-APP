@@ -169,3 +169,5 @@ class _TodoScreenState extends State<TodoScreen> {
   }
 }
 // Stored tasks as clean String list without heavy model wrapper
+
+// SharedPreferences loadTasks and saveTasks synchronization
