@@ -104,3 +104,23 @@ class _TodoHomeScreenState extends State<TodoHomeScreen> {
 
 // Simplified tasks list directly with Map<String, dynamic> for rapid prototyping without unnecessary boilerplate
 
+
+
+// Added SharedPreferences persistence methods
+import 'dart:convert';
+import 'package:shared_preferences/shared_preferences.dart';
+
+Future<void> saveTasksToPrefs(List<Map<String, dynamic>> tasks) async {
+  final prefs = await SharedPreferences.getInstance();
+  await prefs.setString('saved_todos', jsonEncode(tasks));
+}
+
+Future<List<Map<String, dynamic>>> loadTasksFromPrefs() async {
+  final prefs = await SharedPreferences.getInstance();
+  final data = prefs.getString('saved_todos');
+  if (data != null) {
+    return List<Map<String, dynamic>>.from(jsonDecode(data));
+  }
+  return [];
+}
+
