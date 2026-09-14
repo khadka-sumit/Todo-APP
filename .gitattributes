@@ -1,2 +1,12 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Vendor platform runner boilerplate so GitHub Linguist marks project as Dart
+windows/** linguist-vendored
+linux/** linguist-vendored
+macos/** linguist-vendored
+ios/** linguist-vendored
+android/** linguist-vendored
+*.cpp linguist-vendored
+*.cc linguist-vendored
+*.h linguist-vendored
